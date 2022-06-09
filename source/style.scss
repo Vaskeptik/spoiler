@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+/* a:focus,
+a:active {
+    outline: none;
+} */
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	background-color: rgb(248, 246, 246);
+}
+.wrapper {
+	padding: 50px;
+	height: 100%;
+}
+
+.block__item {
+	margin: 0px 0px 32px 0px;
+}
+.block__title::before,
+.block__title::after {
+	content: "";
+	width: 20px;
+	height: 4px;
+	background-color: rgb(0, 0, 0);
+	position: absolute;
+	top: 25px;
+	transition: all 0.3s ease 0s;
+}
+.block__title::before {
+	left: 0;
+	transform: rotate(45deg);
+}
+.block__title::after {
+	left: 11.4px;
+	transform: rotate(-45deg);
+}
+.block__title {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 64px;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	margin: 0px 0px 18px 0px;
+	padding: 0px 0px 0px 50px;
+}
+.block__text {
+	display: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	color: rgb(37, 37, 37);
+}
+.block__title.active::before,
+.block__title.active::after {
+	background-color: rgb(45, 173, 45);
+}
+.block__title.active::before {
+	transform: rotate(-45deg);
+}
+.block__title.active::after {
+	transform: rotate(45deg);
+}
